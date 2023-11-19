@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #708090;
+    /* background-color: silver; */
+    color: #FEF6EB;
+    max-width: 1920px;
+    /* font-family: 'Gabarito', cursive; */
+    /* font-family: 'Martian Mono', monospace; */
+    font-family: 'Mooli', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr 49px;
+}
+
+
+
+.head-page {
+    /* margin: 15px 20px; */
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & h1 {
+        font-size: 2em;
+    }
+}
+
+.head-page__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.head-page__search  {
+    position: relative;
+    display: flex;
+    align-items: center;  
+}
+
+.change {
+    height: 80%;
+    border-radius: 20px;
+    background-color: #FEF6EB;
+    /* border-color: transparent; */
+    border: none;
+    outline: none;
+}
+
+.inp {
+    appearance: none;
+    width: 350px;
+    color: #104d86;
+    padding: 0 35px;
+}
+
+.btn {
+    width: 30px;
+    position: absolute;
+    top: 3.5px;
+    right: 320px;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: url(assets/svg/magnifying-glass.svg);
+}
+
+.btn_close {
+    width: 30px;
+    position: absolute;
+    top: 3.5px;
+    right: 0;
+    cursor: pointer;
+}
+
+.btn_close::before {
+    content: url(assets/svg/xmark-solid.svg);
+}
+
+button:where(.btn, .btn_close):disabled {
+    cursor: auto;
+    opacity: 0.5;
+}
+
+.head-line {
+    height: 3px;
+    background-color: #D6DCA0;
+}
+
+.photos {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 15px 20px;
+    gap: 20px;
+}
+
+.photos__cover {
+    background-size: cover;
+    background-position: center;
+}
+
+.photos__cover_err {
+    grid-column: span 3;
+    grid-row: span 3;
+    text-align: center;
+    margin: 30vh auto;
+    font-size: 2rem;
+}
+
+/* .photoIt {
+    width: calc((100vw - 80px) / 3);
+    height: calc((100vh - 192px) / 3);
+    object-fit: cover;
+} */
+
+.photoIt {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+
+.icons-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    & p{
+        color: #D6DCA0;
+        font-size: 1.5em;
+    }
+}
